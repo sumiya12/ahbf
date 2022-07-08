@@ -10,10 +10,10 @@ export default function Profile() {
       .then((res) => setData(res));
   }, []);
 
-  //   console.log(data && data);
+  let style = { borderRadius: "10px" };
   return (
     <div>
-      <img src={data?.picture} alt="asas" />
+      <img src={data?.picture} alt="profilePic" style={style.borderRadius} />
     </div>
   );
 }
