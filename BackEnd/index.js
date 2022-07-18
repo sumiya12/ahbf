@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const fs = require("fs");
+require("dotenv").config();
+app.use(express.static("public"));
+const PORT = process.env.PORT;
 
 app.use(
   cors({
@@ -39,4 +42,5 @@ app.get("/major", cors(), (req, res) => {
   res.send(info);
 });
 
-app.listen(4000);
+app.listen(PORT);
+console.log(`running port ${PORT}`);
