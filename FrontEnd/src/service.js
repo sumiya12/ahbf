@@ -38,6 +38,14 @@ const Major = async (cred) => {
     },
   });
 };
+const mp3 = async (cred) => {
+  return await fetch("http://localhost:3000/audio", {
+    method: "GET",
+    headers: {
+      "Content-type": "audio/mpeg3",
+    },
+  });
+};
 
 export const services = {
   Profile,
@@ -45,4 +53,5 @@ export const services = {
   Age,
   Name,
   Major,
+  mp3,
 };

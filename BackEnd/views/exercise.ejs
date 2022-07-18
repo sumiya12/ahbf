@@ -1,0 +1,17 @@
+<head>
+  <link rel="stylesheet" href="./mystyle.css" />
+</head>
+
+<body>
+  <h1 style="display: flex; margin: 20px; justify-content: center">
+    Today we use EJS
+  </h1>
+  <ul style="display: flex; margin: 20px; justify-content: center">
+    <% for(var i = 0; i < data.img.length; i++){%>
+    <li style="margin: 20px; text-decoration: none; list-style: none">
+      <img src="<%=data.img[i]%>" style="width: 200px; height: 200px" />
+      <h3><%=data.text[i]%></h3>
+    </li>
+    <%}%>
+  </ul>
+</body>
