@@ -39,7 +39,7 @@ const Major = async (cred) => {
   });
 };
 const mp3 = async (cred) => {
-  return await fetch("http://localhost:3000/audio", {
+  return await fetch("http://localhost:3000/audio/c.mp3", {
     method: "GET",
     headers: {
       "Content-type": "audio/mpeg3",
